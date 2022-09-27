@@ -1,13 +1,13 @@
 package ru.netology.javaqa;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
 
 
 public class RadioTest {
 
     @Test
-    public void setMoreNumberStation(){
+    public void setMoreNumberStation() {
         Radio radio = new Radio();
         radio.setNumberStation(10);
 
@@ -17,7 +17,7 @@ public class RadioTest {
     }
 
     @Test
-    public void setLessNumberStation(){
+    public void setLessNumberStation() {
         Radio radio = new Radio();
         radio.setNumberStation(-1);
 
@@ -27,7 +27,7 @@ public class RadioTest {
     }
 
     @Test
-    public void nextTestNine(){
+    public void nextTestNine() {
         Radio radio = new Radio();
         radio.setNumberStation(9);
         radio.next();
@@ -38,7 +38,7 @@ public class RadioTest {
     }
 
     @Test
-    public void nextTestZero(){
+    public void nextTestZero() {
         Radio radio = new Radio();
         radio.setNumberStation(0);
         radio.next();
@@ -71,7 +71,7 @@ public class RadioTest {
     }
 
     @Test
-    public void setVolumeMore(){
+    public void setVolumeMore() {
         Radio radio = new Radio();
         radio.setVolume(11);
 
@@ -81,7 +81,7 @@ public class RadioTest {
     }
 
     @Test
-    public void setVolumeLess(){
+    public void setVolumeLess() {
         Radio radio = new Radio();
         radio.setVolume(-1);
 
@@ -91,7 +91,7 @@ public class RadioTest {
     }
 
     @Test
-    public void plusVolumeMax(){
+    public void plusVolumeMax() {
         Radio radio = new Radio();
         radio.setVolume(10);
         radio.plusVolume();
@@ -102,7 +102,7 @@ public class RadioTest {
     }
 
     @Test
-    public void plusVolumeMin(){
+    public void plusVolumeMin() {
         Radio radio = new Radio();
         radio.setVolume(0);
         radio.plusVolume();
@@ -113,7 +113,7 @@ public class RadioTest {
     }
 
     @Test
-    public void minusVolumeMax(){
+    public void minusVolumeMax() {
         Radio radio = new Radio();
         radio.setVolume(10);
         radio.minusVolume();
@@ -124,7 +124,7 @@ public class RadioTest {
     }
 
     @Test
-    public void minusVolumeMin(){
+    public void minusVolumeMin() {
         Radio radio = new Radio();
         radio.setVolume(0);
         radio.minusVolume();

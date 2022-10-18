@@ -19,6 +19,9 @@ public class RadioTest {
     public void setMoreNumberStation() {
         Radio radio = new Radio(10);
         radio.setNumberStation(11);
+    public void setMoreNumberStation() {
+        Radio radio = new Radio();
+        radio.setNumberStation(10);
 
         int expected = 0;
         int actual = radio.getNumberStation();
@@ -28,6 +31,7 @@ public class RadioTest {
     @Test
     public void setLessNumberStation() {
         Radio radio = new Radio(10);
+        Radio radio = new Radio();
         radio.setNumberStation(-1);
 
         int expected = 0;
@@ -38,6 +42,7 @@ public class RadioTest {
     @Test
     public void nextTestNine() {
         Radio radio = new Radio(10);
+        Radio radio = new Radio();
         radio.setNumberStation(9);
         radio.next();
 
@@ -49,6 +54,7 @@ public class RadioTest {
     @Test
     public void nextTestZero() {
         Radio radio = new Radio(10);
+        Radio radio = new Radio();
         radio.setNumberStation(0);
         radio.next();
 
@@ -82,6 +88,7 @@ public class RadioTest {
 
     @Test
     public void maxVolume() {
+    public void setVolumeMore() {
         Radio radio = new Radio();
         radio.setVolume(101);
 
@@ -90,6 +97,7 @@ public class RadioTest {
 
     @Test
     public void minVolume() {
+    public void setVolumeLess() {
         Radio radio = new Radio();
         radio.setVolume(-1);
 

@@ -82,35 +82,23 @@ public class RadioTest {
 
     @Test
     public void maxVolume() {
-        Radio radio = new Radio(0, 100);
+        Radio radio = new Radio();
+        radio.setVolume(101);
 
-        Assertions.assertEquals(0, radio.getMinVolume());
         Assertions.assertEquals(100, radio.getMaxVolume());
     }
 
     @Test
-    public void setVolumeMore() {
-        Radio radio = new Radio(0, 100);
-        radio.setVolume(101);
-
-        int expected = 100;
-        int actual = radio.getVolume();
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void setVolumeLess() {
-        Radio radio = new Radio(0, 100);
+    public void minVolume() {
+        Radio radio = new Radio();
         radio.setVolume(-1);
 
-        int expected = 0;
-        int actual = radio.getVolume();
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(0, radio.getMinVolume());
     }
 
     @Test
     public void plusVolumeMax() {
-        Radio radio = new Radio(0, 100);
+        Radio radio = new Radio();
         radio.setVolume(100);
         radio.plusVolume();
 
@@ -121,7 +109,7 @@ public class RadioTest {
 
     @Test
     public void plusVolumeMin() {
-        Radio radio = new Radio(0, 100);
+        Radio radio = new Radio();
         radio.setVolume(0);
         radio.plusVolume();
 
@@ -132,7 +120,7 @@ public class RadioTest {
 
     @Test
     public void minusVolumeMax() {
-        Radio radio = new Radio(0, 100);
+        Radio radio = new Radio();
         radio.setVolume(10);
         radio.minusVolume();
 
@@ -143,7 +131,7 @@ public class RadioTest {
 
     @Test
     public void minusVolumeMin() {
-        Radio radio = new Radio(0, 100);
+        Radio radio = new Radio();
         radio.setVolume(0);
         radio.minusVolume();
 

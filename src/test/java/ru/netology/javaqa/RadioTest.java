@@ -40,7 +40,7 @@ public class RadioTest {
     }
 
     @Test
-    public void nextTestNine() {
+    public void nextTestMax() {
         Radio radio = new Radio(10);
         Radio radio = new Radio();
         radio.setNumberStation(9);
@@ -52,7 +52,7 @@ public class RadioTest {
     }
 
     @Test
-    public void nextTestZero() {
+    public void nextTestMin() {
         Radio radio = new Radio(10);
         Radio radio = new Radio();
         radio.setNumberStation(0);
